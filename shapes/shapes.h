@@ -8,7 +8,7 @@ using namespace std;
 class Shape {
 public:
 	Shape(const string);
-//	virtual ~Shape();							// Virtual destructor.  Put this line
+	virtual ~Shape();							// Virtual destructor.  Put this line
 												// back in to get rid of the "bug".
 	string getColour() const;
 	double normalGetArea() const;				// normal

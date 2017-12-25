@@ -3,25 +3,18 @@
 # Define required macros here
 SHELL = /bin/sh
 
-OBJS =  shapes.o testShapes.o
-SHAPES = shapes.h shapes.cpp
-TESTSHAPES = testShapes.cpp
+FILES = testShapes.cpp shapes.h shapes.cpp
+OUTPUT_NAME = shapes
 CXX = g++
 DEBUG = -g
-CXXFLAGS = -Wall -c --std=c++11 $(DEBUG)
+CXXFLAGS = -Wall --std=c++11 $(DEBUG)
 LFLAGS = -Wall $(DEBUG)
 INCLUDES =
 
-build: shapes testshapes ${OBJ}
-	${CXX} ${LFLAGS} ${INCLUDES} -o ${OBJS}
-
-shapes: ${SHAPES}
-	${CXX} ${CXXFLAGS} ${INCLUDES} ${SHAPES}
-
-testshapes: ${TESTSHAPES}
-	${CXX} ${CXXFLAGS} ${INCLUDES} ${TESTSHAPES}
+build: ${FILES}
+	${CXX} ${CXXFLAGS} ${INCLUDES} -o ${OUTPUT_NAME} ${FILES}
 
 clean:	
-	-rm -f *.o *.gch
+	-rm -f *.o *.gch shapes
 
 rebuild: clean build

@@ -8,7 +8,7 @@ using namespace std;
 // Shape*********************
 Shape::Shape(const string col) :
 		colour(col) {}
-//Shape::~Shape() {}
+Shape::~Shape() {}
 string Shape::getColour() const {
 	return colour;
 }
@@ -20,9 +20,9 @@ double Shape::virtualGetArea() const {
 	return -100000;
 }
 // Uncomment this when abstractGetArea is no longer pure virtual
-//double Shape::abstractGetArea() const {
-//	return -9999;
-//}
+double Shape::abstractGetArea() const {
+	return -9999;
+}
 
 // Rectangle******************
 Rectangle::Rectangle(const string col, double hite, double wid) :
@@ -36,9 +36,9 @@ double Rectangle::normalGetArea() const {
 double Rectangle::virtualGetArea() const {
 	return height * width;
 }
-//double Rectangle::abstractGetArea() const {
-//	return height * width;
-//}
+double Rectangle::abstractGetArea() const {
+	return height * width;
+}
 void Rectangle::rectangleMessage() {
 	cout << "Here is a message from inside a Rectangle!" << endl;
 }

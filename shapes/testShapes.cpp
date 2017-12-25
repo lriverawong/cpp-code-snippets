@@ -26,6 +26,7 @@ int main() {
 	Shape* shapePtr = &sqrVar;
 	sqrVar.squareMessage();
 	sqrVar.rectangleMessage();		// Not inherited - hidden!
+	cout << "The previous message was an overloaded inherited virtual method" << endl;
 	sqrVar.rectangleMessage("Alan");
 
 	cout << "Testing the pointer:" << endl;
@@ -40,7 +41,7 @@ int main() {
 	cout << "\nTesting reference:" << endl;
 	cout << "Square area = " << shapeRef.normalGetArea() << endl;
 	cout << "Square area = " << shapeRef.virtualGetArea() << endl;
-	//shapeRef.squareMessage();		// Fails early binding
+	// shapeRef.squareMessage();		// Fails early binding
 
 	// Normal instantiation - no funny stuff (polymorphism) here!
 	cout << "\nNormal instantiation:" << endl;

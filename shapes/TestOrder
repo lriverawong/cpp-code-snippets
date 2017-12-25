@@ -1,0 +1,13 @@
+Order of tests:
+
+See the warnings if you don't have a virtual destructor in a base class.
+Fix!
+
+See what happens when derived classes don't implement the pure virtual function.
+Implement it in Rectangle only.
+
+See what happens if the base class remains abstract.
+Make the pure virtual function just virtual.
+Implement the virtual function for Shape (uncomment the code).
+
+Get rid of attempted call to hidden function.

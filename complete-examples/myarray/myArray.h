@@ -3,17 +3,18 @@
 
 using namespace std;
 
-class MyArrayException {
+class MyArrayBoundsException {
     private:
         string message;
     public: 
-        MyArrayException(const string&);
+        MyArrayBoundsException(const string&);
         string errorMessage();
 };
 
 class MyArray{
     private:
         unique_ptr<int[]> intArr;
+        int size;
     public:
         MyArray(const int[]);
         MyArray(const int[], const int);

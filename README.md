@@ -5,3 +5,5 @@ Each component/folder highlights different aspects of C++ such as:
 - smarts pointers
 - inheritance
 - templates
+
+Luis Rivera-Wong

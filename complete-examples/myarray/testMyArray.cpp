@@ -14,8 +14,8 @@ int main() {
     //double balance[5] = {1000.0, 2.0, 3.4, 17.0, 50.0};
     // int regArr[4] = {1,2,3,4};
     // MyArray arr3()
-    string aString[2] = {"hello", "world"};
-    arr3->fun(aString);
+    int intArr[2] = {6, 7};
+    MyArray arr4(intArr);
     
     
     cout << "---- End of program ----" << endl;

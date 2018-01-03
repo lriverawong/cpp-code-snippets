@@ -3,8 +3,6 @@
 
 using namespace std;
 
-
-
 class MyArrayBoundsException {
     private:
         string message;
@@ -13,22 +11,20 @@ class MyArrayBoundsException {
         string& errorMessage();
 };
 
-class MyArray{
-    
-    private:
-        unique_ptr<int[]> intArr;
-        int size;
-        
-        // int arrSize(int (&argArr)[N]);
-        
-    public:
-        int getSize();
-        MyArray();
-        MyArray(int);
-        // MyArray(int (&argArr));
-        // MyArray(const int[], const int);
-        // MyArray(const MyArray&);
-        template<int N>
-        void fun(string (&s)[N]);
-        
+
+class MyArray
+{
+
+  private:
+    unique_ptr<int[]> intArr;
+    int size;
+    template <int N>
+    int arrSize(int (&argArr)[N]);
+
+  public:
+    int getSize();
+    MyArray();
+    MyArray(int argSize);
+    template <int N>
+    MyArray(int (&argArr)[N]);
 };

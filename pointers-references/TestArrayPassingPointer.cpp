@@ -5,6 +5,13 @@ using namespace std;
 // Function prototype
 int max(const int *arr, int size);
  
+/*
+Following are equivalent:
+int max(int numbers[], int size);
+int max(int *numbers, int size);
+int max(int number[50], int size);
+*/
+ 
 int main() {
    const int SIZE = 5;
    int numbers[SIZE] = {10, 20, 90, 76, 22};

@@ -22,20 +22,11 @@ void changeArrPtr(int anArr[], int size) {
     }
 }
 
-void changeArrRef(int (&anArr), int size) {
-    for (int i = 0; i < size; i++) {
-        anArr[i] = 20 + i;
-    }
-}
-
 int main() {
     int anArr[] = {1,2,3,4,5,6};
     printArr(anArr, 6);
     cout << typeid(anArr).name() << endl;
     // pointer
     changeArrPtr(anArr, 6);
-    printArr(anArr, 6);
-    // reference
-    changeArrRef(anArr, 6);
     printArr(anArr, 6);
 }

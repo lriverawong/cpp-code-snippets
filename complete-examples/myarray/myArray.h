@@ -35,17 +35,3 @@ class MyArray {
     friend MyArray operator+(const MyArray &arr1, const MyArray &arr2);
     friend ostream &operator<<(ostream &out, const MyArray &anArr);
 };
-
-/*
-Inherits from MyArray, and is simply a container for 2 arrays stored on the heap.
-*/
-template<typename T>
-class DualMyArray : public MyArray {
-    private:
-        unique_ptr<T> tArr;
-        int size2;
-    public:
-        DualMyArray();
-    friend ostream &operator<<(ostream &out, const DualMyArray &anArr);    
-        
-}
